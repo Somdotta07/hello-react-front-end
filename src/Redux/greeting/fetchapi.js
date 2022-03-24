@@ -21,7 +21,7 @@ const messageReducer = (state = initialState, action) => {
 };
 export const fetchmessage = () => async (dispatch) => {
   dispatch({ type: 'FETCHING_MESSAGE' });
-  await fetch('https://aqueous-lowlands-69166.herokuapp.com/api/greetings')
+  await fetch('http://127.0.0.1:3000/api/greetings')
     .then((response) => response.json())
     .then((data) => {
       dispatch({ type: 'COMPLETE_MESSAGE', payload: data });
